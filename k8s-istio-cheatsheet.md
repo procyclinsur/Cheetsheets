@@ -33,3 +33,13 @@ kubectl exec $(kubectl get pods -n $NAMESPACE \
              -n $NAMESPACE -c istio-proxy \
              -- curl -X POST localhost:15000/logging?filter=$LEVEL -s
 ```
+
+### Add labels to a namespace
+```bash
+kubectl label namespace solarmori istio-injection=enabled
+```
+
+### Remove labels from a namespace
+```bash
+kubectl label namespace solarmori istio-injection-
+```
