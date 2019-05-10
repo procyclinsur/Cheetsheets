@@ -1,4 +1,6 @@
-Docker
+# Docker
+
+### Clean Docker Images and Containers
 ```bash
 clean_docker() {
     for i in `sudo docker container list --all | grep -v COMMAND | awk '{print $1}'`
