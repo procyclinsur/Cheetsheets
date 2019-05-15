@@ -20,6 +20,26 @@ function refresh-all-pods() {
 }
 ```
 
+### Switch K8S Contexts (for EKS: may work with other setups)
+```bash
+function swikube() {
+    for context in $(kubectl config get-contexts --output=name); do 
+        if [ ${context##*/} == $1 ]; then
+            kubectl config use-context $context
+            status=0
+            break
+        else
+            status=1
+        fi
+    done
+    if [ $status == 1 ]; then
+        echo ERROR:  Enter a valid cluster name
+    fi
+    status=0
+}
+```
+
+
 # ISTIO
 
 ### Enable log level setting on istio-proxy
