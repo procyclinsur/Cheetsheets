@@ -45,9 +45,9 @@ function swikube() {
 ### Enable log level setting on istio-proxy
 ```bash
 function log-level-change-k8s() {
-    POD_NAME=<APPLICATION_LABEL>
-    NAMESPACE=<NAMESPACE>
-    LEVEL=<LOG_LEVEL>
+    POD_NAME=$1
+    NAMESPACE=$2
+    LEVEL=$3
     kubectl exec $(kubectl get pods -n $NAMESPACE \
                                     -l app=$POD_NAME \
                                     -o jsonpath='{.items[0].metadata.name}') \
