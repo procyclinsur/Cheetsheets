@@ -65,3 +65,7 @@ kubectl label namespace solarmori istio-injection=enabled
 ```bash
 kubectl label namespace solarmori istio-injection-
 ```
+
+### Reasons for 503 Errors
+
+* Backend pod is not running successfully
