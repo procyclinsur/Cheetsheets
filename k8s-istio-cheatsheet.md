@@ -69,3 +69,5 @@ kubectl label namespace solarmori istio-injection-
 ### Reasons for 503 Errors
 
 * Backend pod is not running successfully
+* Connecting to resources outside of local namespace, it is required to use the full k8s DNS name.
+    * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
