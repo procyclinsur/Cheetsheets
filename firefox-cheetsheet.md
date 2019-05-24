@@ -2,4 +2,4 @@
 
 ### Dealing with service workers in firefox
 
-[Service Worker Link](about:debugging#workers)
+Service Worker Link: `about:debugging#workers`
