@@ -48,11 +48,12 @@ function log-level-change-k8s() {
     POD_NAME=$1
     NAMESPACE=$2
     LEVEL=$3
+    L_TYPE=$4
     kubectl exec $(kubectl get pods -n $NAMESPACE \
                                     -l app=$POD_NAME \
                                     -o jsonpath='{.items[0].metadata.name}') \
                  -n $NAMESPACE -c istio-proxy \
-                 -- curl -X POST localhost:15000/logging?filter=$LEVEL -s
+                 -- curl -X POST localhost:15000/logging?$L_TYPE=$LEVEL -s
 }
 ```
 
