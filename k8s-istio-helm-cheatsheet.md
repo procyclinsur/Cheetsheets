@@ -84,3 +84,21 @@ spec:
       annotations:
         sidecar.istio.io/inject: "false"
 ```
+
+# Helm
+
+### Update a release
+
+```bash
+helm upgrade --install \
+             --set cp-schema-registry.enabled=false \
+             --set cp-kafka-rest.enabled=false \
+             --set cp-ksql-server.enabled=false \
+             --set cp-kafka.prometheus.jmx.enabled=false \
+             --set cp-zookeeper.prometheus.jmx.enabled=false \
+             --set cp-kafka.imageTag=$KAFKA_IMG_VER \
+             --set cp-zookeeper.imageTag=$KAFKA_ZK_IMG_VER \
+             --namespace atp-system \
+             atp-cmb \ # RELEASE NAME
+             confluentinc/cp-helm-charts # CHART PATH
+```
