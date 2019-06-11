@@ -102,3 +102,34 @@ helm upgrade --install \
              atp-cmb \ # RELEASE NAME
              confluentinc/cp-helm-charts # CHART PATH
 ```
+
+### Test templating before deploy
+
+assumes your template `override.yml` file is in `$PWD/helm`.
+
+```bash
+function helm-tmpl-oride() {
+    ###########
+    # Variables
+    ###########
+    RLSE=$1  # Helm release name
+    CHRT=$2  # Helm chart name
+    FILE=$3  # File path/name
+    BASE=$PWD
+    
+    #############
+    # Fetch Chart
+    #############
+    mkdir -p /tmp/helm
+    cd /tmp/helm
+    helm fetch --untar --untardir . $CHRT
+    CHRT_DIR=$(ls -td /tmp/helm/*/ | head -n 1)
+    
+    ################
+    # Check template
+    ################
+    helm template --name $RLSE $CHRT_DIR -f $BASE/$FILE > manifest.yml
+    vim manifest.yml
+    cd $BASE
+}
+```
