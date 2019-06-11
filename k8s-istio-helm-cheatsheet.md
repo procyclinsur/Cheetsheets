@@ -105,8 +105,6 @@ helm upgrade --install \
 
 ### Test templating before deploy
 
-assumes your template `override.yml` file is in `$PWD/helm`.
-
 ```bash
 function helm-tmpl-oride() {
     ###########
