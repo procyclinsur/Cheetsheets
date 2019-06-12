@@ -21,5 +21,5 @@ curl -X GET "localhost:9200/index_name"
 ### get data from index matching "test"
 
 ```bash
-curl -X GET "localhost:9200/test-nginx-2019-06/_search?q=test" | jq .
+curl -X GET "localhost:9200/index_name/_search?q=test" | jq .
 ```
