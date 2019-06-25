@@ -38,7 +38,28 @@ function swikube() {
     status=0
 }
 ```
+### Manually deploy container for troubleshooting, w/autoremoval and AWS Role
 
+This assumes that you have a working installation of kube2iam.
+
+```bash
+override='{
+  "spec": {
+    "template": {
+      "metadata": {
+        "annotations": {
+          "iam.amazonaws.com/role": "kafka-s3-rules"
+        }
+      }
+    }
+  }
+}'
+
+kubectl run --generator=deployment/apps.v1 test-logstash \
+            -n atp-system --stdin --tty --rm \
+            --overrides "$override" \
+            --image docker.elastic.co/logstash/logstash-oss:7.1.1 bash
+```
 
 # ISTIO
 
