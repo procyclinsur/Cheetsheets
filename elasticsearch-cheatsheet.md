@@ -95,7 +95,8 @@ services:
       - elasticsearch
 networks:
   elk:
-    driver: bridge
+    external:
+      name: dev-net
 END
 }
 
