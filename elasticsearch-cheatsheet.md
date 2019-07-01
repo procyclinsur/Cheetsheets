@@ -24,7 +24,7 @@ curl -X GET "localhost:9200/index_name"
 curl -X GET "localhost:9200/index_name/_search?q=test" | jq .
 ```
 
-### Start ELK Dev Cluster
+### Start elk-service script
 
 elk-service.sh
 
