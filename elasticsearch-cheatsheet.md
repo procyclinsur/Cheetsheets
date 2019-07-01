@@ -100,27 +100,29 @@ networks:
 END
 }
 
-if [ -z $CMD ] || [ -z $VER ]; then
-    command-help
-fi
-
-case $CMD in
-    up)
-        create-pipeline
-	create-compose $VER
-        docker-compose up -d
-	rm -f logstash.conf
-	rm -f docker-compose.yml
-        ;;
-    down)
-	create-pipeline
-        create-compose $VER
-        docker-compose down
-        rm -f logstash.conf
-	rm -f docker-compose.yml
-        ;;
-    *)
+function main() {
+    if [ -z $CMD ] || [ -z $VER ]; then
         command-help
-        ;;
-esac
+    fi
+
+    case $CMD in
+        up)
+            create-pipeline
+            create-compose $VER
+            docker-compose up -d
+            ;;
+        down)
+            create-pipeline
+            create-compose $VER
+            docker-compose down
+            ;;
+        *)
+            command-help
+            ;;
+    esac
+    rm -f logstash.conf
+    rm -f docker-compose.yml
+}
+
+main
 ```
