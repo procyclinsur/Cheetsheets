@@ -11,3 +11,19 @@ clean_docker() {
     done
 }
 ```
+
+### Edit `docker ps` output format
+
+Example of psformat addition to ~/.docker/config
+
+```json
+{
+  "psFormat": "table {{.Names}}\\t{{.Networks}}\\t{{.RunningFor}} ago\\t{{.Status}}"
+}
+```
+
+Available options can be found using the command:
+
+```bash
+docker ps --format '{{ json .}}' | jq
+```
