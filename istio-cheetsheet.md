@@ -27,12 +27,6 @@ kubectl label namespace solarmori istio-injection=enabled
 kubectl label namespace solarmori istio-injection-
 ```
 
-#### *Reasons for 503 Errors*
-
-* Backend pod is not running successfully
-* Connecting to resources outside of local namespace, it is required to use the full k8s DNS name.
-    * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
-
 #### *Disable automatic side-car injection for a pod*
 
 * To disable automatic side-car injection for a specific pod, you should iinclude the following in its `spec`
@@ -45,6 +39,14 @@ spec:
         sidecar.istio.io/inject: "false"
 ```
 
+### Troubl
+
+#### *Reasons for 503 Errors*
+
+* Backend pod is not running successfully
+* Connecting to resources outside of local namespace, it is required to use the full k8s DNS name.
+    * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzQ2MjM0MzhdfQ==
+eyJoaXN0b3J5IjpbMTMwMjYzMTU4M119
 -->
