@@ -57,6 +57,9 @@ spec:
 
 ### *Whitelisting IP Addresses*
 
+#### Mixer Settings:
+
+##### Handler
 ```yaml
 apiVersion: config.istio.io/v1alpha2
 kind: handler
@@ -69,7 +72,10 @@ spec:
     # externally and fetched asynchronously using the providerUrl.
     overrides: ["v1", "v2"]  # overrides provide a static list
     blacklist: false
----
+```
+
+##### Instance 
+```yaml
 apiVersion: config.istio.io/v1alpha2
 kind: instance
 metadata:
@@ -99,7 +105,8 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc3NDc2NzQ4LDE0NjczMjg4NjMsLTEzNT
-Q0ODU0OSw0MDU4MzIwMCwxMzM5MDM5MzM3LC0xMjU0Njc1MDk3
-LC0xODM4NjgzNDQ0LDY5ODA2MjIzNCwtNTY5Nzc5NTddfQ==
+eyJoaXN0b3J5IjpbMTIxOTcwMzEwNyw5Nzc0NzY3NDgsMTQ2Nz
+MyODg2MywtMTM1NDQ4NTQ5LDQwNTgzMjAwLDEzMzkwMzkzMzcs
+LTEyNTQ2NzUwOTcsLTE4Mzg2ODM0NDQsNjk4MDYyMjM0LC01Nj
+k3Nzk1N119
 -->
