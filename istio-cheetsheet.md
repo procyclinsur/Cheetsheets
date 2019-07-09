@@ -57,6 +57,39 @@ spec:
 
 ### *Whitelisting IP Addresses*
 
+```yaml
+apiVersion: config.istio.io/v1alpha2
+kind: handler
+metadata:
+  name: whitelist
+spec:
+  compiledAdapter: listchecker
+  params:
+    # providerUrl: ordinarily black and white lists are maintained
+    # externally and fetched asynchronously using the providerUrl.
+    overrides: ["v1", "v2"]  # overrides provide a static list
+    blacklist: false
+---
+apiVersion: config.istio.io/v1alpha2
+kind: instance
+metadata:
+  name: appversion
+spec:
+  compiledTemplate: listentry
+  params:
+    value: source.labels["version"]
+---
+apiVersion: config.istio.io/v1alpha2
+kind: rule
+metadata:
+  name: checkversion
+spec:
+  match: destination.labels["app"] == "ratings"
+  actions:
+  - handler: whitelist
+    instances: [ appversion ]
+---
+```
 ## Troubleshooting
 
 ### *Reasons for 503 Errors*
@@ -66,7 +99,7 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NzMyODg2MywtMTM1NDQ4NTQ5LDQwNT
-gzMjAwLDEzMzkwMzkzMzcsLTEyNTQ2NzUwOTcsLTE4Mzg2ODM0
-NDQsNjk4MDYyMjM0LC01Njk3Nzk1N119
+eyJoaXN0b3J5IjpbOTc3NDc2NzQ4LDE0NjczMjg4NjMsLTEzNT
+Q0ODU0OSw0MDU4MzIwMCwxMzM5MDM5MzM3LC0xMjU0Njc1MDk3
+LC0xODM4NjgzNDQ0LDY5ODA2MjIzNCwtNTY5Nzc5NTddfQ==
 -->
