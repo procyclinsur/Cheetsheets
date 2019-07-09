@@ -109,9 +109,33 @@ spec:
 
 ##### Handler
 
+```yaml
+apiVersion: config.istio.io/v1alpha2
+kind: handler
+metadata:
+  name: whitelistip
+spec:
+  compiledAdapter: listchecker
+  params:
+    # providerUrl: ordinarily black and white lists are maintained
+    # externally and fetched asynchronously using the providerUrl.
+    overrides: ["10.57.0.0/16"]  # overrides provide a static list
+    blacklist: false
+    entryType: IP_ADDRESSES
+```
+
 ##### Instance
 
- 
+```yaml
+apiVersion: config.istio.io/v1alpha2
+kind: instance
+metadata:
+  name: sourceip
+spec:
+  compiledTemplate: listentry
+  params:
+    value: source.ip | ip("0.0.0.0")
+``` 
 
 ##### Rule
 
@@ -136,8 +160,8 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5Mjg5NDMxLDYwMzQzOTQ2NSw5Nzc0Nz
-Y3NDgsMTQ2NzMyODg2MywtMTM1NDQ4NTQ5LDQwNTgzMjAwLDEz
-MzkwMzkzMzcsLTEyNTQ2NzUwOTcsLTE4Mzg2ODM0NDQsNjk4MD
-YyMjM0LC01Njk3Nzk1N119
+eyJoaXN0b3J5IjpbLTExNTQ5MjkxOTIsNjAzNDM5NDY1LDk3Nz
+Q3Njc0OCwxNDY3MzI4ODYzLC0xMzU0NDg1NDksNDA1ODMyMDAs
+MTMzOTAzOTMzNywtMTI1NDY3NTA5NywtMTgzODY4MzQ0NCw2OT
+gwNjIyMzQsLTU2OTc3OTU3XX0=
 -->
