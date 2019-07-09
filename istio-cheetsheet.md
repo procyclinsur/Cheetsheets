@@ -1,6 +1,10 @@
 
 # ISTIO
 
+## Notes
+
+### Mixer
+
 ## Configuration
 ### *Enable log level setting on istio-proxy*
 ```bash
@@ -39,7 +43,7 @@ spec:
         sidecar.istio.io/inject: "false"
 ```
 
-### **
+### *Whitelisting IP Addresses*
 
 ## Troubleshooting
 
@@ -50,5 +54,5 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTc3OTU3XX0=
+eyJoaXN0b3J5IjpbNjk4MDYyMjM0LC01Njk3Nzk1N119
 -->
