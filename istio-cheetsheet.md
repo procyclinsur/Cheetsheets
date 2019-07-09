@@ -5,6 +5,8 @@
 
 ### Mixer
 
+M
+
 ## Configuration
 ### *Enable log level setting on istio-proxy*
 ```bash
@@ -54,5 +56,6 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk4MDYyMjM0LC01Njk3Nzk1N119
+eyJoaXN0b3J5IjpbNzY4NjcxODExLDY5ODA2MjIzNCwtNTY5Nz
+c5NTddfQ==
 -->
