@@ -57,6 +57,8 @@ spec:
 
 ### *Whitelisting IP Addresses*
 
+The following whitelists all traffic with 
+
 #### Mixer Settings:
 
 ##### Handler
@@ -74,7 +76,8 @@ spec:
     blacklist: false
 ```
 
-##### Instance 
+##### Instance
+ 
 ```yaml
 apiVersion: config.istio.io/v1alpha2
 kind: instance
@@ -84,7 +87,11 @@ spec:
   compiledTemplate: listentry
   params:
     value: source.labels["version"]
----
+```
+
+##### Rule
+
+```yaml
 apiVersion: config.istio.io/v1alpha2
 kind: rule
 metadata:
@@ -94,8 +101,8 @@ spec:
   actions:
   - handler: whitelist
     instances: [ appversion ]
----
 ```
+
 ## Troubleshooting
 
 ### *Reasons for 503 Errors*
@@ -105,8 +112,8 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTcwMzEwNyw5Nzc0NzY3NDgsMTQ2Nz
-MyODg2MywtMTM1NDQ4NTQ5LDQwNTgzMjAwLDEzMzkwMzkzMzcs
-LTEyNTQ2NzUwOTcsLTE4Mzg2ODM0NDQsNjk4MDYyMjM0LC01Nj
-k3Nzk1N119
+eyJoaXN0b3J5IjpbNjAzNDM5NDY1LDk3NzQ3Njc0OCwxNDY3Mz
+I4ODYzLC0xMzU0NDg1NDksNDA1ODMyMDAsMTMzOTAzOTMzNywt
+MTI1NDY3NTA5NywtMTgzODY4MzQ0NCw2OTgwNjIyMzQsLTU2OT
+c3OTU3XX0=
 -->
