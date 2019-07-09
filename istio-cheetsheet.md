@@ -5,7 +5,7 @@
 
 ### Mixer
 
-Istio Mixer is responsible for providing policy and telemetry configuration data.  This is handled through standard functionality, and with the addition of Adapters which abstract various backend services.  
+Istio Mixer is responsible for providing policy and telemetry configuration data.  This is handled through standard functionality, and with the addition of Adapters which abstract various backend services.  Policy and telemetry configurations are defined via templates.  
 
 Envoy Side-Cars cache policy data from Mixer that is used for each request, and buffer telemetry data to send to Mixer in bulk.
 
@@ -58,6 +58,6 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNzI2OTQsLTE4Mzg2ODM0NDQsNjk4MD
-YyMjM0LC01Njk3Nzk1N119
+eyJoaXN0b3J5IjpbLTEyNTQ2NzUwOTcsLTE4Mzg2ODM0NDQsNj
+k4MDYyMjM0LC01Njk3Nzk1N119
 -->
