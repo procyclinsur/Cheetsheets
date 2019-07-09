@@ -5,7 +5,7 @@
 
 ### Mixer
 
-M
+Istio Mixer is responsible for 
 
 ## Configuration
 ### *Enable log level setting on istio-proxy*
@@ -56,6 +56,6 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY4NjcxODExLDY5ODA2MjIzNCwtNTY5Nz
-c5NTddfQ==
+eyJoaXN0b3J5IjpbLTEzODQwODMxNCw2OTgwNjIyMzQsLTU2OT
+c3OTU3XX0=
 -->
