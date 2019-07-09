@@ -1,8 +1,8 @@
 
 # ISTIO
 
-### Configuration
-#### *Enable log level setting on istio-proxy*
+## Configuration
+### *Enable log level setting on istio-proxy*
 ```bash
 function log-level-change-k8s() {
     POD_NAME=$1
@@ -17,17 +17,17 @@ function log-level-change-k8s() {
 }
 ```
 
-#### *Add labels to a namespace*
+### *Add labels to a namespace*
 ```bash
 kubectl label namespace solarmori istio-injection=enabled
 ```
 
-#### *Remove labels from a namespace*
+### *Remove labels from a namespace*
 ```bash
 kubectl label namespace solarmori istio-injection-
 ```
 
-#### *Disable automatic side-car injection for a pod*
+### *Disable automatic side-car injection for a pod*
 
 * To disable automatic side-car injection for a specific pod, you should iinclude the following in its `spec`
 
@@ -39,14 +39,16 @@ spec:
         sidecar.istio.io/inject: "false"
 ```
 
-### Troubl
+### **
 
-#### *Reasons for 503 Errors*
+## Troubleshooting
+
+### *Reasons for 503 Errors*
 
 * Backend pod is not running successfully
 * Connecting to resources outside of local namespace, it is required to use the full k8s DNS name.
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjYzMTU4M119
+eyJoaXN0b3J5IjpbLTU2OTc3OTU3XX0=
 -->
