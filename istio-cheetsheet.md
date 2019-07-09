@@ -9,8 +9,8 @@ Istio Mixer is responsible for providing policy and telemetry configuration data
 
 | Object |  Description |
 |---|---|
-| Adapters | Abstract backe |
-| Attributes |  |
+| Adapters | Used to abstract telemetry and policy backends to istio. |
+| Attributes | Individual KV pair data  |
 | Handlers |  |
 | Instances |  |
 | Roles |  |
@@ -68,7 +68,7 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0OTcxMjI2LDEzMzkwMzkzMzcsLTEyNT
-Q2NzUwOTcsLTE4Mzg2ODM0NDQsNjk4MDYyMjM0LC01Njk3Nzk1
-N119
+eyJoaXN0b3J5IjpbLTE0MDgzMTYyNzYsMTMzOTAzOTMzNywtMT
+I1NDY3NTA5NywtMTgzODY4MzQ0NCw2OTgwNjIyMzQsLTU2OTc3
+OTU3XX0=
 -->
