@@ -63,7 +63,8 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 # ISTIO
 
-### Enable log level setting on istio-proxy
+### Configuration**
+#### Enable log level setting on istio-proxy
 ```bash
 function log-level-change-k8s() {
     POD_NAME=$1
@@ -152,3 +153,6 @@ function helm-tmpl-oride() {
     cd $BASE
 }
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3OTcwMTQyNF19
+-->
