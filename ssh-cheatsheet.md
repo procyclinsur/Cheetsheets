@@ -8,7 +8,6 @@ ssh-add /path/to/key/key.pem
 ssh-add -l
 ```
 
-test addition
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTY1MjAyOTZdfQ==
+eyJoaXN0b3J5IjpbOTIyNzkwMjEyXX0=
 -->
