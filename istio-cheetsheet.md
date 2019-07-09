@@ -5,7 +5,7 @@
 
 ### Mixer
 
-Istio Mixer is responsible for 
+Istio Mixer is responsible for enforcing various policy based control methods, and processing of telemetry data.
 
 ## Configuration
 ### *Enable log level setting on istio-proxy*
@@ -56,6 +56,6 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODQwODMxNCw2OTgwNjIyMzQsLTU2OT
-c3OTU3XX0=
+eyJoaXN0b3J5IjpbNTU1OTcwMDg4LDY5ODA2MjIzNCwtNTY5Nz
+c5NTddfQ==
 -->
