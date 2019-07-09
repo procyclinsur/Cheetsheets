@@ -57,7 +57,7 @@ spec:
 
 ### *Whitelisting IP Addresses*
 
-The following whitelists all traffic with 
+The following whitelists all traffic with a version of `v1` or `v2` to destinations labeled `app: ratings`
 
 #### Mixer Settings:
 
@@ -112,8 +112,8 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzNDM5NDY1LDk3NzQ3Njc0OCwxNDY3Mz
-I4ODYzLC0xMzU0NDg1NDksNDA1ODMyMDAsMTMzOTAzOTMzNywt
-MTI1NDY3NTA5NywtMTgzODY4MzQ0NCw2OTgwNjIyMzQsLTU2OT
-c3OTU3XX0=
+eyJoaXN0b3J5IjpbLTE4NTA1NjI2MzUsNjAzNDM5NDY1LDk3Nz
+Q3Njc0OCwxNDY3MzI4ODYzLC0xMzU0NDg1NDksNDA1ODMyMDAs
+MTMzOTAzOTMzNywtMTI1NDY3NTA5NywtMTgzODY4MzQ0NCw2OT
+gwNjIyMzQsLTU2OTc3OTU3XX0=
 -->
