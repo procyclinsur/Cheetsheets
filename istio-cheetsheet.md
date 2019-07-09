@@ -62,6 +62,7 @@ The following whitelists all traffic from sources labeled `version: v1` or `vers
 #### Mixer Settings:
 
 ##### Handler
+
 ```yaml
 apiVersion: config.istio.io/v1alpha2
 kind: handler
@@ -102,6 +103,16 @@ spec:
   - handler: whitelist
     instances: [ appversion ]
 ```
+### IP Based Whitelisiting
+
+#### Mixer Settings:
+
+##### Handler
+
+##### Instance
+ 
+##### Rule
+
 
 ## Troubleshooting
 
@@ -112,8 +123,8 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODkyNzcwNyw2MDM0Mzk0NjUsOTc3ND
-c2NzQ4LDE0NjczMjg4NjMsLTEzNTQ0ODU0OSw0MDU4MzIwMCwx
-MzM5MDM5MzM3LC0xMjU0Njc1MDk3LC0xODM4NjgzNDQ0LDY5OD
-A2MjIzNCwtNTY5Nzc5NTddfQ==
+eyJoaXN0b3J5IjpbLTE0NDczNzYyOTgsNjAzNDM5NDY1LDk3Nz
+Q3Njc0OCwxNDY3MzI4ODYzLC0xMzU0NDg1NDksNDA1ODMyMDAs
+MTMzOTAzOTMzNywtMTI1NDY3NTA5NywtMTgzODY4MzQ0NCw2OT
+gwNjIyMzQsLTU2OTc3OTU3XX0=
 -->
