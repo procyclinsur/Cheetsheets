@@ -5,7 +5,7 @@
 
 ### Mixer
 
-Istio Mixer is responsible for enforcing various policy based control methods, and processing of telemetry data.  Mixer is made up of 
+Istio Mixer is responsible for enforcing various policy based control methods, and processing of telemetry data.  Envoy Side-Cars cache 
 
 ## Configuration
 ### *Enable log level setting on istio-proxy*
@@ -56,6 +56,6 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNzA5MTQxNiw2OTgwNjIyMzQsLTU2OT
-c3OTU3XX0=
+eyJoaXN0b3J5IjpbLTEzODM4NjE4MzAsNjk4MDYyMjM0LC01Nj
+k3Nzk1N119
 -->
