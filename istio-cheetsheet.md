@@ -105,7 +105,7 @@ spec:
 ```
 ### IP Based Whitelisiting
 
-Traffic from `10.57.0.0/16` to destination labeled
+The following whitelists all traffic from source IP`10.57.0.0/16` to destination labeled `istio: ingressgateway`
 
 #### Mixer Settings:
 
@@ -162,7 +162,7 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMTAzNzc0MCw2MDM0Mzk0NjUsOTc3ND
+eyJoaXN0b3J5IjpbLTE0ODg1NzU4OCw2MDM0Mzk0NjUsOTc3ND
 c2NzQ4LDE0NjczMjg4NjMsLTEzNTQ0ODU0OSw0MDU4MzIwMCwx
 MzM5MDM5MzM3LC0xMjU0Njc1MDk3LC0xODM4NjgzNDQ0LDY5OD
 A2MjIzNCwtNTY5Nzc5NTddfQ==
