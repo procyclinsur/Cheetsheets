@@ -15,8 +15,6 @@ Istio Mixer is responsible for providing policy and telemetry configuration data
 | Instances | Instances represent a chunk of data that one or more adapters will operate on, and describe how to map a requests attributes to an adapter input. |
 | Roles | Describe when a particular adapter is called and which instances it will be given. |
 
-Envoy and Adapters interface with Mixer using these attributes.
-
 Envoy Side-Cars cache policy data from Mixer that is used for each request, and buffer telemetry data to send to Mixer in bulk.
 
 ## Configuration
@@ -68,7 +66,7 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTQ0ODU0OSw0MDU4MzIwMCwxMzM5MD
-M5MzM3LC0xMjU0Njc1MDk3LC0xODM4NjgzNDQ0LDY5ODA2MjIz
-NCwtNTY5Nzc5NTddfQ==
+eyJoaXN0b3J5IjpbMTQ2NzMyODg2MywtMTM1NDQ4NTQ5LDQwNT
+gzMjAwLDEzMzkwMzkzMzcsLTEyNTQ2NzUwOTcsLTE4Mzg2ODM0
+NDQsNjk4MDYyMjM0LC01Njk3Nzk1N119
 -->
