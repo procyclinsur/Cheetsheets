@@ -5,9 +5,11 @@
 
 ### Mixer
 
-Istio Mixer is responsible for providing policy and telemetry configuration data.  This is handled through standard functionality, and with the addition of Adapters which abstract various backend services.  Mixer has the following basic components.
+Istio Mixer is responsible for providing policy and telemetry configuration data.  This is handled via the following objects.
 
-* Adapters
+| Object |  Description |
+|---|---|
+| Adapters
 * Attributes
 * Handlers
 * Instances
@@ -66,7 +68,7 @@ spec:
     * i.e. ~~core-api-svc~~ -> core-api-svc.core-namespace.svc.cluster.local
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDM0ODU0MjAsMTMzOTAzOTMzNywtMT
+eyJoaXN0b3J5IjpbLTIwNDM5NDAwMjQsMTMzOTAzOTMzNywtMT
 I1NDY3NTA5NywtMTgzODY4MzQ0NCw2OTgwNjIyMzQsLTU2OTc3
 OTU3XX0=
 -->
