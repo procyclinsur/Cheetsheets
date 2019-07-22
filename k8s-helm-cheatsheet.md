@@ -88,7 +88,7 @@ function helm-tmpl-oride() {
     ###########
     RLSE=$1  # Helm release name
     CHRT=$2  # Helm chart name
-    FILE=$3  # File path/name
+    OPTS=${@:3}  # All options after 2
     BASE=$PWD
     
     #############
@@ -102,8 +102,8 @@ function helm-tmpl-oride() {
     ################
     # Check template
     ################
-    helm template --name $RLSE $CHRT_DIR -f $BASE/$FILE > manifest.yml
-    vim manifest.yml
+    helm template --name $RLSE $OPTS $CHRT_DIR 
+    rm -rf /tmp/helm
     cd $BASE
 }
 ```
