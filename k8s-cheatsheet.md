@@ -4,7 +4,10 @@
 
 ## Tools
 
+### Kubespy
 
+Watch changes to a resource over time.
+- https://github.com/pulumi/kubespy
 
 ## Functions
 
@@ -87,5 +90,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODk0NTY3Nl19
+eyJoaXN0b3J5IjpbLTEyMDE0NTYwMTJdfQ==
 -->
