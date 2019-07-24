@@ -1,8 +1,9 @@
 # K8S
 
-## Interesting resources
+## K8S Internals
 
-- https://jbns/.c
+- https://jvns.ca/blog/2017/07/27/how-does-the-kubernetes-scheduler-work/
+- 
 
 ## TIPS
 
@@ -115,6 +116,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNDQzNTA2NiwxODkyNDMzMTMwLC0xMT
-gyMzc5NzgyXX0=
+eyJoaXN0b3J5IjpbLTE4NzI1MDg0MjUsMTg5MjQzMzEzMCwtMT
+E4MjM3OTc4Ml19
 -->
