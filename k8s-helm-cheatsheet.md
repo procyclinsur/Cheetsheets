@@ -82,15 +82,15 @@ helm upgrade --install \
 ### Test templating before deploy
 
 ```bash
-function helm-tmpl-oride() {
+function helm-tmpl-install() {
     ###########
     # Variables
     ###########
-    RLSE=$1  # Helm release name
-    CHRT=$2  # Helm chart name
+    CHRT=$1
+    NMSPC=$2
     OPTS=${@:3}  # All options after 2
     BASE=$PWD
-    
+
     #############
     # Fetch Chart
     #############
@@ -98,15 +98,21 @@ function helm-tmpl-oride() {
     cd /tmp/helm
     helm fetch --untar --untardir . $CHRT
     CHRT_DIR=$(ls -td /tmp/helm/*/ | head -n 1)
-    
+
     ################
     # Check template
     ################
-    helm template --name $RLSE $OPTS $CHRT_DIR 
+    FILE=$(mktemp)
+    helm template --namespace $NMSPC $OPTS $CHRT_DIR | tee $FILE
+    read -p "Should we deploy this configuration? yes/no [no]: " DEPLOY
+    DEPLOY=${DEPLOY:-no}
+    if [ $DEPLOY == yes ]; then
+        kubectl apply -n $NMSPC -f "$FILE"
+    fi
     rm -rf /tmp/helm
     cd $BASE
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTgyMzc3Ml19
+eyJoaXN0b3J5IjpbMzUxMjU2MjQsLTY3OTgyMzc3Ml19
 -->
