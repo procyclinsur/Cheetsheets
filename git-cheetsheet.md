@@ -20,3 +20,10 @@ git log --pretty=format:"%h%x09%an%x09%ad%x09%s" tag..master | wc -l
 git reset HEAD^ --hard
 git push origin -f
 ```
+
+####
+
+git rebase -i 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk3MDcyNTM2NV19
+-->
