@@ -12,9 +12,15 @@
 
 ```bash
 kubectl get <resource-type> \
-            -n <namespace \
-            resource-name \
+            -n <namespace> \
+            <resource-name> \
             -o yaml --export > my-manifest.yaml
+```
+
+### Check what would change before deploying
+
+```bash
+
 ```
 
 ### Refresh All Pods ([ORIGINAL](https://gist.github.com/jmound/ff6fa539385d1a057c82fa9fa739492e))
@@ -81,5 +87,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4ODI0Nzc1OF19
+eyJoaXN0b3J5IjpbLTc0NTIyMzkyMl19
 -->
