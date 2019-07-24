@@ -16,7 +16,8 @@ Attach gdb or dlv (golang debugger) to any container process.
 
 ### Stern
 
-View logs from groups of pods, or containers 
+View logs from groups of pods, or containers at one time, each pod/container log will be prefixed with their name.
+- https://github.com/werck
 
 ## Functions
 
@@ -99,5 +100,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODIzNzk3ODJdfQ==
+eyJoaXN0b3J5IjpbMTk0NDM4NDY4MCwtMTE4MjM3OTc4Ml19
 -->
