@@ -6,7 +6,8 @@
 
 ### Descheduler
 
-sh
+Can be run every so often to rebalance the cluster preventing mistakes made by the scheduler.
+- https://github.com/kubernetes-incubator/descheduler
 
 ### Kubespy
 
@@ -104,5 +105,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzQyMjQ4MCwtMTE4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbMTg5MjQzMzEzMCwtMTE4MjM3OTc4Ml19
 -->
