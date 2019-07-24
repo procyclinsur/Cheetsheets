@@ -11,7 +11,10 @@ Watch changes to a resource over time.
 
 ### Kubesquash
 
-Attach golang or p
+Attach gdb or dlv (golang debugger) to any container process.
+- https://github.com/solo-io/kubesquash
+
+### 
 
 ## Functions
 
@@ -94,5 +97,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0OTQxMjY3OV19
+eyJoaXN0b3J5IjpbLTIwOTczNDY4MzRdfQ==
 -->
