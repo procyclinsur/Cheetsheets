@@ -3,7 +3,9 @@
 ## K8S Internals
 
 - https://jvns.ca/blog/2017/07/27/how-does-the-kubernetes-scheduler-work/
-- 
+- Deployments manage ReplicaSets
+	- Deployment automagically creates a replicaset to manage pods.
+- ReplicaSet manages Pods
 
 ## TIPS
 
@@ -116,6 +118,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI1MDg0MjUsMTg5MjQzMzEzMCwtMT
-E4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbOTYyOTY0MjAyLDE4OTI0MzMxMzAsLTExOD
+IzNzk3ODJdfQ==
 -->
