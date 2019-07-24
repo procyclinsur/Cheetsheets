@@ -21,10 +21,11 @@ git reset HEAD^ --hard
 git push origin -f
 ```
 
-####
+#### Rebase keeping own commits.
 
-
+```bash
 git rebase -i 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQwNTk2MTksMTk3MDcyNTM2NV19
+eyJoaXN0b3J5IjpbMjExMTAyODk3NCwxOTcwNzI1MzY1XX0=
 -->
