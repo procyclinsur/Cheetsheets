@@ -4,7 +4,7 @@
 
 - Use a mix of pre-emptible (spot) nodes and reserved nodes to save costs.
 	- deploy nodes that can support failure on pre-emptible nodes.
-	- 
+- Use liveness and readyness 
 
 ## Tools
 
@@ -109,6 +109,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk5MTMyMTc2LDE4OTI0MzMxMzAsLTExOD
-IzNzk3ODJdfQ==
+eyJoaXN0b3J5IjpbMTEyNDg5NzM5MywxODkyNDMzMTMwLC0xMT
+gyMzc5NzgyXX0=
 -->
