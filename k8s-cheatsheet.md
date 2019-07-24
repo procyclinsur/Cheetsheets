@@ -4,6 +4,10 @@
 
 ## Tools
 
+### Descheduler
+
+sh
+
 ### Kubespy
 
 Watch changes to a resource over time.
@@ -17,7 +21,7 @@ Attach gdb or dlv (golang debugger) to any container process.
 ### Stern
 
 View logs from groups of pods, or containers at one time, each pod/container log will be prefixed with their name.
-- https://github.com/werck
+- https://github.com/wercker/stern
 
 ## Functions
 
@@ -100,5 +104,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NDM4NDY4MCwtMTE4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbMTI2NzQyMjQ4MCwtMTE4MjM3OTc4Ml19
 -->
