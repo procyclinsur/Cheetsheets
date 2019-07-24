@@ -14,7 +14,9 @@ Watch changes to a resource over time.
 Attach gdb or dlv (golang debugger) to any container process.
 - https://github.com/solo-io/kubesquash
 
-### 
+### Stern
+
+View logs from groups of pods, or containers 
 
 ## Functions
 
@@ -97,5 +99,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTczNDY4MzRdfQ==
+eyJoaXN0b3J5IjpbLTExODIzNzk3ODJdfQ==
 -->
