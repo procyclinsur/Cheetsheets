@@ -1,6 +1,14 @@
 # K8S
 
-## 
+
+
+## Tools
+
+
+
+## Functions
+
+
 ### Refresh All Pods ([ORIGINAL](https://gist.github.com/jmound/ff6fa539385d1a057c82fa9fa739492e))
 ```bash
 function refresh-all-pods() {
@@ -65,5 +73,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzA5NDE1NV19
+eyJoaXN0b3J5IjpbMTAzNjI4MTg3MV19
 -->
