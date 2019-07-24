@@ -9,6 +9,10 @@
 Watch changes to a resource over time.
 - https://github.com/pulumi/kubespy
 
+### Kubesquash
+
+Attach golang or p
+
 ## Functions
 
 ### Get YAML deployment manifests for running resource
@@ -90,5 +94,5 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDE0NTYwMTJdfQ==
+eyJoaXN0b3J5IjpbMTg0OTQxMjY3OV19
 -->
