@@ -2,8 +2,9 @@
 
 ## TIPS
 
-- Use a mix of Pre-emptible (spot) nodes and reserved nodes to save costs.
-	- s
+- Use a mix of pre-emptible (spot) nodes and reserved nodes to save costs.
+	- deploy nodes that can support failure on pre-emptible nodes.
+	- 
 
 ## Tools
 
@@ -108,6 +109,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzM4NzQ2MDYsMTg5MjQzMzEzMCwtMT
-E4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbODk5MTMyMTc2LDE4OTI0MzMxMzAsLTExOD
+IzNzk3ODJdfQ==
 -->
