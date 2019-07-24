@@ -13,7 +13,7 @@
 	- deploy nodes that can support failure on pre-emptible nodes.
 - Use liveness and readiness probes to prevent traffic from being directed to your application until it is ready ( preventing loss of data )
 - Define resource limits and requests for your pods/containers ( prevents resource hogging )
-- Operations best practice should be to run a `kubectl diff -f file.yaml` before deploying a manifest to ensure, the c
+- Operations best practice should be to run a `kubectl diff -f file.yaml` before deploying a manifest to ensure, the changes you made are what will happen on the cluster.
 
 ## Tools
 
@@ -118,6 +118,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MDMwNTA1MCw5NjI5NjQyMDIsMTg5Mj
-QzMzEzMCwtMTE4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbLTEyOTAwMDU2NTYsOTYyOTY0MjAyLDE4OT
+I0MzMxMzAsLTExODIzNzk3ODJdfQ==
 -->
