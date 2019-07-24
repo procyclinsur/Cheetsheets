@@ -1,6 +1,9 @@
 # K8S
 
+## TIPS
 
+- Use a mix of Pre-emptible (spot) nodes and reserved nodes to save costs.
+	- s
 
 ## Tools
 
@@ -105,5 +108,6 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MjQzMzEzMCwtMTE4MjM3OTc4Ml19
+eyJoaXN0b3J5IjpbLTE5MzM4NzQ2MDYsMTg5MjQzMzEzMCwtMT
+E4MjM3OTc4Ml19
 -->
