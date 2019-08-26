@@ -50,11 +50,7 @@ glist () {
 #### Restore stash # alias
 ```bash
 grestore () {
-    if [ -z $1 ]; then
-        echo specify stash number
-        exit 1
-    fi
-    git stash apply stash@{$1}
-    git stash drop stash@{$1}
+    git stash apply stash@{${1:=0}}
+    git stash drop stash@{${1:=0}}
 }
 ```
