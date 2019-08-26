@@ -33,24 +33,27 @@ eyJoaXN0b3J5IjpbMjExMTAyODk3NCwxOTcwNzI1MzY1XX0=
 #### Stash work alias
 
 ```bash
-gstash () { 
-    TOP=$(git rev-parse --show-toplevel)
-    git add $TOP/*
-    git stash
-}
+alias gstash='git stash'
 ```
 
 #### List stashes alias
 
 ```bash
-glist () {
-    git stash list
-}
+alias glist='git stash list'
 ```
-#### Restore stash # alias
+
+#### Check stash function
 ```bash
 grestore () {
-    git stash apply stash@{${1:=0}}
-    git stash drop stash@{${1:=0}}
+    num=$1
+    git stash show stash@{${num:=0}}
+```
+
+#### Restore stash # function
+```bash
+grestore () {
+    num=$1
+    git stash apply stash@{${num:=0}}
+    git stash drop stash@{${num:=0}}
 }
 ```
