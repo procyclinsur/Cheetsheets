@@ -44,7 +44,7 @@ alias glist='git stash list'
 
 #### Check stash function
 ```bash
-grestore () {
+gshow () {
     num=$1
     git stash show stash@{${num:=0}}
 ```
