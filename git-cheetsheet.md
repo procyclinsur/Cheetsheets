@@ -29,3 +29,32 @@ git rebase -i
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjExMTAyODk3NCwxOTcwNzI1MzY1XX0=
 -->
+
+#### Stash work alias
+
+```bash
+gstash () { 
+    TOP=$(git rev-parse --show-toplevel)
+    git add $TOP/*
+    git stash
+}
+```
+
+#### List stashes alias
+
+```bash
+glist () {
+    git stash list
+}
+```
+#### Restore stash # alias
+```bash
+grestore () {
+    if [ -z $1 ]; then
+        echo specify stash number
+        exit 1
+    fi
+    git stash apply stash@{$1}
+    git stash drop stash@{$1}
+}
+```
