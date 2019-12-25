@@ -14,6 +14,7 @@
 - Use liveness and readiness probes to prevent traffic from being directed to your application until it is ready ( preventing loss of data )
 - Define resource limits and requests for your pods/containers ( prevents resource hogging )
 - Operations best practice should be to run a `kubectl diff -f file.yaml` before deploying a manifest to ensure, the changes you made are what will happen on the cluster.
+- When troubleshooting containers on EKS if a pod is stuck in `Creating` state, then it may be due to an over allocation of IP'S for the node's CNI Plugin.
 
 ## Tools
 
@@ -115,7 +116,14 @@ kubectl run --generator=deployment/apps.v1 test-logstash \
             --image docker.elastic.co/logstash/logstash-oss:7.1.1 bash
 ```
 
+### Manually deploy container for troubleshooting cockroachdb
 
+```bash
+kubectl run temp-db-client -n solarmori --rm -it \
+            --image=cockroachdb/cockroach \
+	    --restart=Never -- sql --insecure \
+	    --host solar-rdbm-cockroachdb-public:26257
+```
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTEyOTAwMDU2NTYsOTYyOTY0MjAyLDE4OT
