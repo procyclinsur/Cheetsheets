@@ -42,8 +42,8 @@ title Query Job Completion
 participant client as c
 participant server as s
 
-// c -> s : {\n\t[\n\t\t"param1",\n\t\t"param2"\n\t],\n\t"/path/to/my/source"\n}
-// s -> c : 01E3S4Q9SN3VHVXB2KCAGD9P62
+' c -> s : {\n\t[\n\t\t"param1",\n\t\t"param2"\n\t],\n\t"/path/to/my/source"\n}
+' s -> c : 01E3S4Q9SN3VHVXB2KCAGD9P62
 
 c -> s : 01E3S4Q9SN3VHVXB2KCAGD9P62
 alt job finished
