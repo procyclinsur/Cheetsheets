@@ -8,36 +8,45 @@
 !define Background   #141F2D
 !define Participant  #22303F
 !define Border       #424A54
-!define Foregound    #CCCCCC
+!define TextColor    #DDDDDD
 
 skinparam Shadowing false
 skinparam roundcorner 20
 skinparam backgroundColor Background
 skinparam Arrow {
-  Color Foregound
-  FontColor Foregound
+  Color TextColor
+  FontColor TextColor
   FontStyle Bold
 }
 skinparam Default {
   FontName Courier
-  FontColor Foreground
+  FontColor TextColor
 }
 skinparam sequence {
-  LifeLineBorderColor Foreground
+  LifeLineBorderColor TextColor
+  GroupBorderColor TextColor
+  GroupBorderThickness 1
+  GroupBackgroundColor Participant
+  GroupFontColor TextColor
+  GroupHeaderFontStyle Normal
+  GroupFontStyle Normal
 }
 skinparam participant {
   BackgroundColor Participant
   BorderColor Border
-  FontColor Foreground
+  FontColor TextColor
 }
 
-title Query Register Request
+title Query Job Completion
 
 participant client as c
 participant server as s
 
-c -> s : {\n\t[\n\t\t"param1",\n\t\t"param2"\n\t],\n\t"/path/to/my/source"\n}
-s -> c : 01E3S4Q9SN3VHVXB2KCAGD9P62
-
+c -> s : 01E3S4Q9SN3VHVXB2KCAGD9P62
+alt job finished
+    s -> c : https://link.to.your/output.csv
+else running/error
+    s -> c : Error: job still running
+end
 @enduml
 ```
