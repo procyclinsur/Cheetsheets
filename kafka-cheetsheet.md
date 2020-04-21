@@ -1,5 +1,67 @@
 ## Kafka Cheetsheet
 
+### rereplicate
+
+change replication on a running topic
+
+```bash
+#!/bin/bash
+
+if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]; then
+    echo "USAGE: rereplicate <topics> <replicas>"
+    echo "    topics_example: topic1,topic2,topic3"
+    echo "    replicas_example : 3"
+    exit 344
+fi
+
+TOPICS=${1//,/ }
+REPLIC=$2
+ZK_NODE=$3
+
+function create_input() {
+    local topic=$1
+    local replic=$2
+    cat > input.json <<END
+{"version":1,
+  "partitions":[
+$(get_partition_strings $topic $replic)
+]}
+END
+}
+
+function get_partition_strings() {
+    local outstr=""
+    local topic=$1
+    local replic=$2
+    local parts=$(kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic $topic 2>/dev/null | awk '/PartitionCount/ { print $4 }')
+    for ((i=$parts;i>1;i--))
+        do outstr=$outstr"    {\"topic\":\"$topic\",\"partition\":$(($i-1)),\"replicas\":$(rand_replica_string $replic)},
+"
+    done
+    outstr=$outstr"    {\"topic\":\"$1\",\"partition\":0,\"replicas\":$(rand_replica_string $replic)}"
+    echo "$outstr"
+}
+
+function rand_replica_string() {
+    local replic=$1
+    echo $(shuf -i 0-$(($replic-1)) | tr "\n" "," | head -c -1)
+}
+
+function main() {
+    local topics=$1
+    local replic=$2
+    local zk=$3
+    echo "Setting replicas to $replic for topics: ${topics// /, }"
+    for topic in $topics
+        do create_input $topic $replic
+        kafka-reassign-partitions.sh --zookeeper $zk --reassignment-json-file input.json --execute
+    done
+    rm -f input.json
+}
+
+main "$TOPICS" "$REPLIC" "$ZK_NODE"
+```
+
 ### kafka-service script
 
 ```bash
