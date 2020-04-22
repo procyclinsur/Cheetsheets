@@ -44,7 +44,7 @@ function get_partition_strings() {
 
 function rand_replica_string() {
     local replic=$1
-    echo $(shuf -i 0-$(($replic-1)) | tr "\n" "," | head -c -1)
+    echo \[$(shuf -i 0-$(($replic-1)) | tr "\n" "," | head -c -1)\]
 }
 
 function main() {
