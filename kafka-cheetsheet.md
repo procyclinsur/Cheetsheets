@@ -1,6 +1,6 @@
 ## Kafka Cheetsheet
 
-### rereplicate
+### repartition
 
 change replication on a running topic
 
@@ -8,7 +8,7 @@ change replication on a running topic
 #!/bin/bash
 
 if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]; then
-    echo "USAGE: rereplicate <topics> <replicas>"
+    echo "USAGE: repartition <topics> <replicas>"
     echo "    topics_example: topic1,topic2,topic3"
     echo "    replicas_example : 3"
     exit 344
