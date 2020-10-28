@@ -1,5 +1,9 @@
 # git cheetsheet
 
+#### INFORMATION ON CREATING ALIASES
+
+https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+
 #### CHECK THE COMMITS BETWEEN `tag` AND `master`. 
 ```bash
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s" tag..master
