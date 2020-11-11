@@ -1,0 +1,17 @@
+= Mate Desktop Cheatsheet
+
+== Save Keyboard Shortcuts
+
+.2020 (Fedora 32)
+[source, bash]
+----
+dconf dump /org/mate/desktop/keybindings/ > shortcuts.ini
+----
+
+== Load Keyboard Shortcuts from file
+
+.2020 (Fedora 32)
+[source, bash]
+----
+dconf load /org/mate/desktop/keybindings/ < shortcuts.ini
+----
