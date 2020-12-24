@@ -2,6 +2,8 @@
 
 Scripts are tagged with topics for things I don't want to forget
 
+---
+
 tags: #dnf #column #read #here_string
 
 this is a horribly inefficient comparitor for checking package update version differneces
@@ -26,3 +28,5 @@ function update-diff () {
            <<<$(echo -e "$UPDATE")
 }
 ```
+
+---
