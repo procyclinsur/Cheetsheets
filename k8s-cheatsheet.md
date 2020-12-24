@@ -129,3 +129,47 @@ kubectl run temp-db-client -n solarmori --rm -it \
 eyJoaXN0b3J5IjpbLTEyOTAwMDU2NTYsOTYyOTY0MjAyLDE4OT
 I0MzMxMzAsLTExODIzNzk3ODJdfQ==
 -->
+
+### Change k8s contexts with ease
+
+```bash
+# func: cm           - Context Manager for k8s
+cm () {
+    err() {
+        echo -e "\e[01;31m$@\e[0m" >&2
+    }
+    helpme () {
+        err "  CONTEXT MANAGER______________________"
+        err "    USAGE: cm [[l], [c <context-name>]]"
+        err "      l - Lists all available contexts"
+        err "      c - Changes to specified context"
+    }
+    ctxs=$(kubectl config get-contexts --output=name)
+    cctx=$(kubectl config current-context)
+    case $1 in
+    l)
+        for ctx in $ctxs; do
+        [ $cctx == $ctx ] && echo "* ${ctx##*/}"
+        ! [ $cctx == $ctx ] && echo "  ${ctx##*/}"
+        done
+        ;;
+    c)
+        [ $2 ] || helpme
+        for ctx in $ctxs
+        do
+    if [ $2 == ${ctx##*/} ]; then
+        kubectl config use-context $ctx
+        stat=0
+        break
+            else
+        stat=1
+    fi
+        done
+        [ $stat == 0 ] || helpme
+        stat=0
+        ;;
+    *)
+        helpme
+    esac
+}
+```
