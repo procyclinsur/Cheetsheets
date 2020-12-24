@@ -5,7 +5,7 @@ Scripts are tagged with topics for things I don't want to forget
 tags: #dnf #column #read #here_string
 this is a horribly inefficient comparitor for checking package update version differneces
 but serves as a good example for the `column` command.
-```
+```bash
 # func: update-diff  - displays the version diff for updates to packages via dnf
 function update-diff () {
     local CURRENT=$(dnf list installed -q | uniq -w30 | awk '{ print $1,$2 }')
