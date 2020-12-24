@@ -1,5 +1,14 @@
 # Docker
 
+### Get name/ip of all docker containers 
+
+```bash
+# func: dips         - Gets the name/ip of all docker containers
+dips () {
+    docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+}
+```
+
 ### Clean Docker Images and Containers
 ```bash
 clean_docker() {
